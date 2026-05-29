@@ -3,17 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KOTA SAGAR | Portfolio</title>
-  <!-- Google Fonts: Outfit -->
+  <title>KOTA SAGAR | Full-Stack Developer & Cybersecurity Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kota Sagar - Java Full Stack Developer & Cybersecurity Enthusiast. View my developer portfolio, projects, and professional skills." />
+  <meta name="keywords" content="Kota Sagar, Full-Stack Developer, Cybersecurity, Spring Boot, Java, Pentesting, Portfolio, Web Developer" />
+  <meta name="author" content="Kota Sagar" />
+  
+  <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Background Glows -->
+<body class="dark">
+  <!-- Background Glow Elements -->
   <div class="glow glow-1"></div>
   <div class="glow glow-2"></div>
 
@@ -24,13 +31,19 @@
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#connect">Contact</a></li>
       </ul>
-      <button class="mobile-toggle" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-      </button>
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-btn" aria-label="Toggle Theme">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -38,10 +51,10 @@
   <section id="hero" class="hero-section">
     <div class="hero-container">
       <div class="hero-content">
-        <h5 class="hero-subtitle">WELCOME TO MY PORTFOLIO</h5>
-        <h1 class="hero-title">Hey, I'm <span>KOTA SAGAR</span></h1>
+        <h5 class="hero-subtitle">WELCOME TO MY DIGITAL SPACE</h5>
+        <h1 class="hero-title">Hi, I'm <span>KOTA SAGAR</span></h1>
         <h2 class="typing-text">I am a <span id="typewriter"></span></h2>
-        <p class="hero-desc">Java Full Stack Developer & Cybersecurity Enthusiast building secure, high-performance web applications and guarding them against digital vulnerabilities.</p>
+        <p class="hero-desc">Java Full Stack Developer & Cybersecurity Enthusiast specialized in building high-performance web applications and implementing robust defensive security practices to safeguard web systems.</p>
         <div class="hero-btns">
           <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="#connect" class="btn btn-secondary">Let's Connect</a>
@@ -57,10 +70,10 @@
           </div>
           <div class="card-body">
             <p class="line"><span class="cmd">sagar@cybersec</span>:<span class="dir">~</span>$ ./analyze_threats.sh</p>
-            <p class="line output">[+] Scanning local network sandbox...</p>
-            <p class="line output">[+] 0 critical vulnerabilities found.</p>
-            <p class="line output">[+] Initializing secure Spring Boot server...</p>
-            <p class="line output">[✓] System fully secured & operational.</p>
+            <p class="line output">[+] Initializing local network scanning tools...</p>
+            <p class="line output">[+] Auditing Java Spring Boot endpoint security...</p>
+            <p class="line output">[+] 0 vulnerabilities detected. Protection fully active.</p>
+            <p class="line output">[✓] Server secure & running on port 8080.</p>
             <p class="line cursor"><span class="cmd">sagar@cybersec</span>:<span class="dir">~</span>$ <span class="blink">_</span></p>
           </div>
         </div>
@@ -77,28 +90,70 @@
       </div>
       <div class="about-content">
         <div class="about-text">
-          <p>I am a passionate <strong>Java Full Stack Developer</strong> and <strong>Cybersecurity Enthusiast</strong> with a strong foundation in building secure, scalable applications and protecting systems from vulnerabilities. As a fresher, I am eager to apply my coding and pen-testing skills to real-world challenges.</p>
-          <p>My journey is fueled by continuous learning, whether it's configuring robust Spring Boot APIs, designing responsive frontend views, or auditing code logic for security compliance.</p>
+          <p>I am a highly driven **Java Full Stack Developer** and **Cybersecurity Enthusiast** dedicated to crafting robust, high-performance web applications with a focus on security by design. As a fresher, I combine modern development paradigms with defensive engineering principles to create safe and reliable user experiences.</p>
+          <p>My workflow incorporates secure RESTful API configuration using **Spring Boot**, clean database schemas in **PostgreSQL/MySQL**, and code audits to defend against common vulnerabilities (OWASP Top 10).</p>
           <div class="about-quote">
             <i class="fas fa-quote-left"></i>
-            <p>Hard work beats talent when talent doesn't work hard. <span>— My mantra for growth</span></p>
+            <p>Hard work beats talent when talent doesn't work hard. <span>— My mantra for continuous learning and growth</span></p>
           </div>
         </div>
         <div class="about-stats">
           <div class="stat-card">
-            <i class="fas fa-code"></i>
-            <h3>Clean Code</h3>
-            <p>Optimized Java & JS</p>
+            <i class="fas fa-laptop-code"></i>
+            <h3>Full-Stack Dev</h3>
+            <p>Clean & scalable architectures</p>
           </div>
           <div class="stat-card">
             <i class="fas fa-shield-halved"></i>
-            <h3>Secure Development</h3>
-            <p>OWASP Top 10 Mitigation</p>
+            <h3>Secure Coding</h3>
+            <p>Defensive design & threat modeling</p>
           </div>
           <div class="stat-card">
-            <i class="fas fa-bolt"></i>
-            <h3>Fast Learner</h3>
-            <p>Eager to Adapt & Build</p>
+            <i class="fas fa-rotate"></i>
+            <h3>Always Learning</h3>
+            <p>Adapting quickly to new tools</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Timeline / Experience -->
+  <section id="experience" class="experience-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">💼 Experience & Education</h2>
+        <div class="title-bar"></div>
+      </div>
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025 - Present</div>
+          <div class="timeline-content glass-panel">
+            <h3>Full-Stack & Security Engineer</h3>
+            <h4 class="company">Independent Projects</h4>
+            <p>Designing secure full-stack applications using Spring Boot, PostgreSQL, and JavaScript. Executing code analysis and penetration testing labs to explore web security vulnerabilities and standard remediations.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - 2025</div>
+          <div class="timeline-content glass-panel">
+            <h3>Full-Stack Development Certification</h3>
+            <h4 class="company">Advanced Tech Academy</h4>
+            <p>Underwent rigorous training in Java core programming, JDBC, Hibernate, Spring Boot frameworks, and SQL databases. Developed multiple multi-tier web applications with responsive web interfaces.</p>
+          </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2021 - 2025</div>
+          <div class="timeline-content glass-panel">
+            <h3>Bachelor of Technology in Computer Science</h3>
+            <h4 class="company">Undergraduate Studies</h4>
+            <p>Completed academic coursework in Computer Networks, Data Structures & Algorithms, Database Management Systems, Operating Systems, and Cryptography & Network Security.</p>
           </div>
         </div>
       </div>
@@ -114,7 +169,7 @@
       </div>
       <div class="skills-grid">
         <!-- Frontend -->
-        <div class="skill-category">
+        <div class="skill-category glass-panel">
           <div class="category-header">
             <i class="fas fa-desktop"></i>
             <h3>Frontend</h3>
@@ -127,10 +182,10 @@
           </ul>
         </div>
         <!-- Backend -->
-        <div class="skill-category">
+        <div class="skill-category glass-panel">
           <div class="category-header">
             <i class="fas fa-server"></i>
-            <h3>Backend & Databases</h3>
+            <h3>Backend & DB</h3>
           </div>
           <ul class="skill-list">
             <li><span class="badge badge-java">Java</span></li>
@@ -140,7 +195,7 @@
           </ul>
         </div>
         <!-- Cybersecurity -->
-        <div class="skill-category">
+        <div class="skill-category glass-panel">
           <div class="category-header">
             <i class="fas fa-user-shield"></i>
             <h3>Cybersecurity</h3>
@@ -153,7 +208,7 @@
           </ul>
         </div>
         <!-- Tools -->
-        <div class="skill-category">
+        <div class="skill-category glass-panel">
           <div class="category-header">
             <i class="fas fa-toolbox"></i>
             <h3>Tools & DevOps</h3>
@@ -177,14 +232,14 @@
       </div>
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card">
+        <div class="project-card glass-panel">
           <div class="project-icon">
             <i class="fas fa-key"></i>
           </div>
           <div class="project-body">
             <h3>Secure Spring Boot REST API</h3>
             <p class="role">Role: Sole Developer</p>
-            <p class="desc">A secure backend API built with Spring Boot, Spring Security, JWT, and PostgreSQL database. Implements encryption, input validation, and password hashing (BCrypt).</p>
+            <p class="desc">A secure backend API built with Spring Boot, Spring Security, JWT, and PostgreSQL. Implements input validation, password hashing (BCrypt), and CORS protection.</p>
             <div class="project-tags">
               <span>Spring Boot</span>
               <span>JWT</span>
@@ -194,14 +249,14 @@
           </div>
         </div>
         <!-- Project 2 -->
-        <div class="project-card">
+        <div class="project-card glass-panel">
           <div class="project-icon">
             <i class="fas fa-network-wired"></i>
           </div>
           <div class="project-body">
             <h3>Packet Capture & Network Analyzer</h3>
             <p class="role">Role: Creator</p>
-            <p class="desc">A network traffic analysis tool built to capture packets and examine TCP/UDP headers. Identifies unusual packet frequencies and warns of potential security anomalies.</p>
+            <p class="desc">A network traffic analysis application built to capture packets and examine TCP/UDP headers. Identifies anomalous traffic frequencies and warns of potential security issues.</p>
             <div class="project-tags">
               <span>Java</span>
               <span>Wireshark API</span>
@@ -211,14 +266,14 @@
           </div>
         </div>
         <!-- Project 3 -->
-        <div class="project-card">
+        <div class="project-card glass-panel">
           <div class="project-icon">
             <i class="fas fa-bug-slash"></i>
           </div>
           <div class="project-body">
             <h3>Vulnerability Scanning & Secure Code Lab</h3>
             <p class="role">Role: Security Analyst</p>
-            <p class="desc">A hands-on code auditing lab configuring secure settings, executing simulated penetration testing using Kali Linux, and mitigating OWASP Top 10 vulnerabilities.</p>
+            <p class="desc">A collection of secure coding exercises demonstrating vulnerability remediation (SQL injection, XSS, CSRF) in Java and simulated pen-testing using Kali Linux.</p>
             <div class="project-tags">
               <span>Kali Linux</span>
               <span>Burp Suite</span>
@@ -241,7 +296,7 @@
       <div class="connect-content">
         <div class="connect-info">
           <h3>Get In Touch</h3>
-          <p>I am looking for exciting fresher opportunities in software engineering, full stack development, and cybersecurity. Feel free to reach out for collaborations or project requests!</p>
+          <p>I am looking for exciting entry-level opportunities in software engineering, full stack web development, and cybersecurity. Feel free to reach out for collaborations, project inquiries, or internships!</p>
           <div class="info-items">
             <div class="info-item">
               <i class="fab fa-linkedin"></i>
@@ -253,7 +308,7 @@
             </div>
           </div>
         </div>
-        <div class="connect-form-container">
+        <div class="connect-form-container glass-panel">
           <form class="contact-form" id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
@@ -278,7 +333,6 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <!-- Visitor counter placeholder -->
       <div class="visitor-counter">
         <img src="https://komarev.com/ghpvc/?username=kotasagar&color=blueviolet&style=flat-square&label=Profile+Views" alt="Profile Views">
       </div>
