@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Mobile Menu Toggle
+  // --- Mobile Menu Toggle ---
   const mobileToggle = document.querySelector('.mobile-toggle');
   const navLinks = document.querySelector('.nav-links');
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Close menu when clicking link
+    // Close menu when clicking links
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -26,9 +26,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Typewriter Animation
+  // --- Theme Toggle (Dark / Light Mode) ---
+  const themeToggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Initialize theme from localStorage or system preference
+  const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark theme
+  body.className = savedTheme;
+  updateThemeIcon(savedTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('dark')) {
+        body.classList.remove('dark');
+        body.classList.add('light');
+        localStorage.setItem('theme', 'light');
+        updateThemeIcon('light');
+      } else {
+        body.classList.remove('light');
+        body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        updateThemeIcon('dark');
+      }
+    });
+  }
+
+  function updateThemeIcon(theme) {
+    if (!themeToggle) return;
+    const icon = themeToggle.querySelector('i');
+    if (icon) {
+      if (theme === 'dark') {
+        icon.className = 'fas fa-sun'; // Show sun in dark mode
+      } else {
+        icon.className = 'fas fa-moon'; // Show moon in light mode
+      }
+    }
+  }
+
+  // --- Typewriter Animation ---
   const typewriter = document.getElementById('typewriter');
-  const words = ['Java Full Stack Developer', 'Cybersecurity Enthusiast', 'Secure Software Engineer'];
+  const words = ['Java Full Stack Developer', 'Cybersecurity Analyst', 'Secure DevOps Enthusiast'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -51,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!isDeleting && charIndex === currentWord.length) {
       // Pause at full word
-      typingSpeed = 2000;
+      typingSpeed = 2200;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
       // Move to next word
@@ -67,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
   }
 
-  // Contact Form Submission Handling
+  // --- Contact Form Handling ---
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');
 
@@ -81,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending Message <i class="fas fa-spinner fa-spin"></i>';
       
-      // Simulate form submission to backend
+      // Simulate network request
       setTimeout(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
@@ -92,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         contactForm.reset();
         
-        // Hide alert after 5 seconds
+        // Auto hide success alert
         setTimeout(() => {
           formAlert.style.display = 'none';
         }, 5000);
